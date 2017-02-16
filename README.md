@@ -1,2 +1,1 @@
-# kangzhongyao2
-# kangzhongyao2
+# bootstrap后端收银管理软件
