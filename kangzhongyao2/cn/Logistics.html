@@ -1,0 +1,117 @@
+<!DOCTYPE html lang="zh-cn" data-livestyle-extension="available">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>货流查询</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../dist/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../dist/css/dashboard.css">
+    <link rel="stylesheet" href="../dist/css/bootstrap-switch.min.css">
+    <link rel="stylesheet" href="http://www.bootcss.com/p/buttons/css/buttons.css">
+    <link href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+      .navbar {
+        background: #283846;
+      }
+      .sidebar {
+        top: 61px;
+      }
+      .tabtit li {
+        float: left;
+        width: 50%;
+        padding: 10px 15px;
+        list-style: none;
+        cursor: pointer;
+        text-align: center;
+      }
+      .tabtit li.seled {
+        color: #44b548;
+        border-bottom: 1px solid #44b548;
+      }
+      .list-group-item span {
+        display: block;
+        float: right;
+        width: 102px;
+        height: 21px;
+        background: #44b548;
+        border-radius: 21px;
+        text-align: center;
+        color: #fff;
+      }
+      .list-group-item div {
+        float: right;
+        margin: -10px 40px 0 0;
+      }
+      .sale-list {
+        background: url('../images/right_arry.png') 95% center  no-repeat;
+      }
+      .main p {
+        line-height: 80px;
+        font-size:30px;
+      }
+      .list-group-item {
+        border-radius: 0;
+        background: #fa1e1e;
+      }
+      .list-group-item span {
+        display: block;
+        float: right;
+        width: 102px;
+        height: 21px;
+        background: inherit;
+        border-radius: 21px;
+        text-align: center;
+        color: #fff;
+        border: 1px solid #fff;
+      }
+    .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    @media (min-width: 768px){
+      .sidebar {
+        padding: 0;
+      }
+    }
+
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-default default" role="navigation">
+    <div class="container-fluid">
+      <span class="navbar-left" onclick="history.go(-1);">
+      <img src="../images/goback.png" alt="">
+    </span>
+      <div class="navbar-header default text-center navbar-text navbar-center col-md-11">
+        <p class="while">货流查询</p>
+      </div>
+    </div>
+  </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-3 sidebar">
+             <ul class="list-group">
+                <li class="list-group-item">
+                     <p>待处理货流通知<span>0</span></p>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 main text-center">
+
+              <img src="../images/huoliu.png" alt="">
+              <p>暂无待处理货流</p>
+        </div>
+      </div>
+    </div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<script src="../dist/js/bootstrap-switch.min.js"></script>
+<script>
+  $(".tabtit li").click(function () {
+      $(this).addClass("seled").siblings().removeClass("seled");
+  })
+</script>
+</html>

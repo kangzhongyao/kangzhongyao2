@@ -1,0 +1,263 @@
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../dist/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../dist/css/bootstrap-switch.min.css">
+	<title>收银软件-增加会员</title>
+	<style>
+		body,html{
+			background: rgb(238,238,238);
+		}
+		.main {
+			width: 100%;
+			padding:0 0 30px;
+			background: rgb(238,238,238);
+		}
+		.main .navbar {
+			text-align: center;
+			background: rgb(39,56,70);
+		}
+		.navbar-header {
+			text-align: center;
+		}
+		.while {
+			margin-bottom: 0;
+			color: #fff;
+			font-size: 18px;
+			line-height: 40px;
+		}
+		.jumbotron	{
+			width: 50%;
+			padding: 10 60px 80px;
+			margin: 0 auto;
+			background: #fff;
+		}
+		.container .jumbotron {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.input-group {
+			width: 90%;
+			margin: 10px auto;
+		}
+		.btn {
+			width: 570px;
+			margin: 20px auto;
+			background: rgb(159,174,186);
+			border: none;
+		}
+		.btn:hover,.btn:active {
+			border: none;
+			background: #283846;
+			outline: none;
+		}
+		.input-group-addon {
+			position: relative;
+			background: none;
+			border: none;
+		}
+		.input-group-lg>.form-control {
+			border-radius: 0;
+		}
+		.Forget_password,.sigin {
+			font-size: 14px;
+		}
+		.mess {
+			margin-top: 60px;
+		}
+		.mess .sigin {
+			margin-right: 90px;
+			float: right;
+			color: rgb(253,154,46);
+		}
+		.mess .Forget_password {
+			margin-left: 93px;
+			color: rgb(82,183,110);
+		}
+		.input-group-addon:before {
+		    display: inline-block;
+		    margin-right: 4px;
+		    content: "*";
+		    font-family: SimSun;
+		    line-height: 1;
+		    font-size: 12px;
+		    color: #fff;
+		}
+		.input-group-addon1:before {
+		    display: inline-block;
+		    margin-right: 4px;
+		    content: "*";
+		    font-family: SimSun;
+		    line-height: 1;
+		    font-size: 12px;
+		    color: #F04134;
+		}
+		*:before, *:after {
+		    box-sizing: border-box;
+		}
+		.input-group-lg>.form-control, .input-group-lg>.input-group-addon, .input-group-lg>.input-group-btn>.btn {
+			padding: 0;
+		}
+		button {
+			padding: 0;
+			border:none;
+			background: #fff;
+			outline: none;
+		}
+		.has-switch{
+		  float: right;
+		  border-radius: 30px;
+		}
+		.input-group-lg>.form-control {
+			width: 310px;
+			text-indent: 3%;
+		}
+		.navbar-left img {
+			width: 40px;
+			height: 40px;
+			margin: 20px 0;
+		}
+		.navbar {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 999;
+		}
+		.container {
+			margin-top: 100px;
+		}
+		.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group>.btn, .input-group-btn:last-child>.dropdown-toggle, .input-group-btn:first-child>.btn:not(:first-child), .input-group-btn:first-child>.btn-group:not(:first-child)>.btn {
+			margin-left: 3%;
+		}
+		.input-group-addon:not(:first-child):not(:last-child), .input-group-btn:not(:first-child):not(:last-child), .input-group .form-control:not(:first-child):not(:last-child) {
+			margin-left: 3%;
+		}
+	</style>
+</head>
+<body>
+<div class="main">
+	<nav class="navbar navbar-default default" role="navigation">
+	  <div class="container-fluid">
+	  	<span class="navbar-left" onclick="history.go(-1);">
+			<img src="../images/goback.png" alt="">
+	 	</span>
+	    <div class="navbar-header default text-center navbar-text navbar-center col-md-11">
+	      <p class="while">新增会员</p>
+	    </div>
+	  </div>
+	</nav>
+	<div class="container">
+		<div class="jumbotron row">
+		 	<div class="input-group input-group-lg ">
+			  <label class="input-group-addon input-group-addon1" for="member">
+			  	会员卡号
+			  </label>
+			  <input type="text" id="member" class="form-control" placeholder="请输入会员卡号">
+			</div>
+			<div class="input-group input-group-lg ">
+			  <span class="input-group-addon input-group-addon1">
+			  	会员姓名
+			  </span>
+			  <input type="text" class="form-control" placeholder="请填写会员姓名">
+			</div>
+			<div class="input-group input-group-lg ">
+			  <span class="input-group-addon">
+			  	联系电话
+			  </span>
+			  <input type="tel" class="form-control" placeholder="请输入电话">
+			</div>
+			<div class="input-group input-group-lg ">
+			  <span class="input-group-addon">
+			  	会员生日
+			  </span>
+			  <input type="date" class="form-control" placeholder="请填写会员姓名">
+			  <span class="switch" data-animated="false" data-on-label="农历" data-off-label="公历">
+                <input type="checkbox" checked />
+              </span>
+			</div>
+			<div class="input-group input-group-lg ">
+			  <span class="input-group-addon input-group-addon1">
+			  	<button type="button" class="" data-toggle="modal" data-target="#myModal">
+ 					 会员等级
+				</button>
+			  </span>
+			  <input type="text" class="form-control" placeholder="">
+			</div>
+			<div class="input-group input-group-lg ">
+			  <span class="input-group-addon input-group-addon1">
+			  	折扣&nbsp;(%)
+			  </span>
+			  <input type="tel" class="form-control" placeholder="100">
+			</div>
+			<div class="input-group input-group-lg ">
+			  <span class="input-group-addon">
+			  	初始积分
+			  </span>
+			  <input type="tel" class="form-control" placeholder="0">
+			</div>
+		</div>
+	</div>
+	<button class="btn btn-lg btn-primary btn-block" type="submit">保存会员</button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">选择会员等级</h4>
+      </div>
+      <div class="modal-body">
+      	<div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>会员等级</th>
+                  <th>折扣</th>
+                  <th>选择</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>VIP会员</td>
+                  <td>50%</td>
+                  <td>
+					<label class="checkbox checked" for="checkbox2">
+						<span class="icon"></span>
+						<span class="icon-to-fade"></span>
+				        <input type="checkbox" checked="checked" value="" id="checkbox2">
+			        </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>银卡会员</td>
+                  <td>80%</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>金卡会员</td>
+                  <td>65%</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>普通会员</td>
+                  <td>100%</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../dist/js/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<script src="../dist/js/bootstrap-switch.min.js"></script>
+</body>
+</html>

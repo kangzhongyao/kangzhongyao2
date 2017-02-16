@@ -1,0 +1,264 @@
+<!DOCTYPE html lang="zh-cn" data-livestyle-extension="available">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>商品查询</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../dist/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../dist/css/dashboard.css">
+    <link rel="stylesheet" href="../dist/css/bootstrap-switch.min.css">
+    <link rel="stylesheet" href="http://www.bootcss.com/p/buttons/css/buttons.css">
+    <link href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../dist/css/zTreeStyle.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <!-- <div class="container">
+          <div class="navbar-header text-center">
+          <a class="navbar-brand " href="javascript:null"></a>
+         
+        </div>
+      </div> -->
+      <div class="container-fluid">
+        <span class="navbar-left" onclick="history.go(-1);">
+          <img src="../images/goback.png" alt="">
+        </span>
+        <div class="navbar-header default text-center navbar-text navbar-center col-md-9">
+          <p class="while">商品查询</p>
+        </div>
+        <div class="col-md-2">
+          <form class="navbar-form navbar-left ">
+            <input type="text" class="form-control" placeholder="搜索条形码、名称">
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+          <span class="button-dropdown button-dropdown-primary" data-buttons="dropdown">
+            <button class="button button-primary button-large">
+              <i><img src="../images/seled_class.png" alt=""></i> 选择分类
+            </button>
+          </span>
+            <ul id="tree" class="ztree" style="width:260px; overflow:auto;"></ul>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <div class="page-header"><p>当前分类: <span>小米</span></p>
+              <div class="switch" data-animated="false" data-on-label="显示" data-off-label="不显示">
+                <input type="checkbox" checked />
+              </div>
+            </div>
+            
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>序号</th>
+                  <th>条形码</th>
+                  <th>商品名称</th>
+                  <th>单位</th>
+                  <th>数量</th>
+                  <th>零售价</th>
+                  <th>是否打折</th>
+                  <th>是否积分</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1,001</td>
+                  <td>Lorem</td>
+                  <td>ipsum</td>
+                  <td>dolor</td>
+                  <td>sit</td>
+                  <td>ipsum</td>
+                  <td>dolor</td>
+                  <td>sit</td>
+                </tr>
+                <tr>
+                  <td>1,002</td>
+                  <td>amet</td>
+                  <td>consectetur</td>
+                  <td>adipiscing</td>
+                  <td>elit</td>
+                  <td>consectetur</td>
+                  <td>adipiscing</td>
+                  <td>elit</td>
+                </tr>
+                <tr>
+                  <td>1,003</td>
+                  <td>Integer</td>
+                  <td>nec</td>
+                  <td>odio</td>
+                  <td>Praesent</td>
+                  <td>nec</td>
+                  <td>odio</td>
+                  <td>Praesent</td>
+                </tr>
+                <tr>
+                  <td>1,003</td>
+                  <td>libero</td>
+                  <td>Sed</td>
+                  <td>cursus</td>
+                  <td>ante</td>
+                  <td>Sed</td>
+                  <td>cursus</td>
+                  <td>ante</td>
+                </tr>
+                <tr>
+                  <td>1,004</td>
+                  <td>dapibus</td>
+                  <td>diam</td>
+                  <td>Sed</td>
+                  <td>nisi</td>
+                  <td>diam</td>
+                  <td>Sed</td>
+                  <td>nisi</td>
+                </tr>
+                <tr>
+                  <td>1,005</td>
+                  <td>Nulla</td>
+                  <td>quis</td>
+                  <td>sem</td>
+                  <td>at</td>
+                  <td>quis</td>
+                  <td>sem</td>
+                  <td>at</td>
+                </tr>
+                <tr>
+                  <td>1,006</td>
+                  <td>nibh</td>
+                  <td>elementum</td>
+                  <td>imperdiet</td>
+                  <td>Duis</td>
+                  <td>elementum</td>
+                  <td>imperdiet</td>
+                  <td>Duis</td>
+                </tr>
+                <tr>
+                  <td>1,007</td>
+                  <td>sagittis</td>
+                  <td>ipsum</td>
+                  <td>Praesent</td>
+                  <td>mauris</td>
+                  <td>ipsum</td>
+                  <td>Praesent</td>
+                  <td>mauris</td>
+                </tr>
+                <tr>
+                  <td>1,008</td>
+                  <td>Fusce</td>
+                  <td>nec</td>
+                  <td>tellus</td>
+                  <td>sed</td>
+                  <td>nec</td>
+                  <td>tellus</td>
+                  <td>sed</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<div id="global-zeroclipboard-html-bridge" class="global-zeroclipboard-container" title="" style="position: absolute; left: 0px; top: -9999px; width: 15px; height: 15px; z-index: 999999999;" data-original-title="Copy to clipboard">    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" id="global-zeroclipboard-flash-bridge" width="100%" height="100%">
+    <param name="movie" value="/assets/flash/ZeroClipboard.swf?noCache=1484567235068">
+    <param name="allowScriptAccess" value="sameDomain">
+    <param name="scale" value="exactfit">
+    <param name="loop" value="false">
+    <param name="menu" value="false">
+    <param name="quality" value="best">
+    <param name="bgcolor" value="#ffffff">
+    <param name="wmode" value="transparent">
+    <param name="flashvars" value="trustedOrigins=v3.bootcss.com%2C%2F%2Fv3.bootcss.com%2Chttp%3A%2F%2Fv3.bootcss.com">  <embed src="/assets/flash/ZeroClipboard.swf?noCache=1484567235068" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="100%" height="100%" name="global-zeroclipboard-flash-bridge" allowscriptaccess="sameDomain" allowfullscreen="false" type="application/x-shockwave-flash" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="trustedOrigins=v3.bootcss.com%2C%2F%2Fv3.bootcss.com%2Chttp%3A%2F%2Fv3.bootcss.com" scale="exactfit">             </object>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" preserveAspectRatio="none" style="visibility: hidden; position: absolute; top: -100%; left: -100%;">
+    <defs>
+    </defs>
+    <text x="0" y="10" style="font-weight:bold;font-size:10pt;font-family:Arial, Helvetica, Open Sans, sans-serif;dominant-baseline:middle">200x200</text>
+  </svg>
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<script src="../dist/js/bootstrap-switch.min.js"></script>
+<script type="text/javascript" src="../dist/js/jquery.ztree.core.js"></script>
+<script>
+   var zTree;
+  var demoIframe;
+
+  var setting = {
+    view: {
+      dblClickExpand: false,
+      showLine: true,
+      selectedMulti: false
+    },
+    data: {
+      simpleData: {
+        enable:true,
+        idKey: "id",
+        pIdKey: "pId",
+        rootPId: ""
+      }
+    },
+    callback: {
+      beforeClick: function(treeId, treeNode) {
+        var zTree = $.fn.zTree.getZTreeObj("tree");
+        if (treeNode.isParent) {
+          zTree.expandNode(treeNode);
+          return false;
+        } else {
+          demoIframe.attr("src",treeNode.file + ".html");
+          return true;
+        }
+      }
+    }
+  };
+  var setting = {
+      view: {
+        showIcon: showIconForTree
+      },
+      data: {
+        simpleData: {
+          enable: true
+        }
+      }
+    };
+function showIconForTree(treeId, treeNode) {
+      return !treeNode.isParent;
+    };
+
+    $(document).ready(function(){
+      $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+    });
+  var zNodes =[
+    {id:1, name:"全部分类", open:true},
+    {id:101, pId:1, name:"小米"},
+    {id:102, pId:1, name:"魅族"},
+    {id:103, pId:1, name:"三星"}
+  ];
+
+  $(document).ready(function(){
+    var t = $("#tree");
+    t = $.fn.zTree.init(t, setting, zNodes);
+    demoIframe = $("#testIframe");
+    demoIframe.bind("load", loadReady);
+    var zTree = $.fn.zTree.getZTreeObj("tree");
+    zTree.selectNode(zTree.getNodeByParam("id", 101));
+
+  });
+
+  function loadReady() {
+    var bodyH = demoIframe.contents().find("body").get(0).scrollHeight,
+    htmlH = demoIframe.contents().find("html").get(0).scrollHeight,
+    maxH = Math.max(bodyH, htmlH), minH = Math.min(bodyH, htmlH),
+    h = demoIframe.height() >= maxH ? minH:maxH ;
+    if (h < 530) h = 530;
+    demoIframe.height(h);
+  }
+</script>
+</html>

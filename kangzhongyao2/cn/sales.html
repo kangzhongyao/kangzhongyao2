@@ -1,0 +1,100 @@
+<!DOCTYPE html lang="zh-cn" data-livestyle-extension="available">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>销售查询</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../dist/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../dist/css/dashboard.css">
+    <link rel="stylesheet" href="../dist/css/bootstrap-switch.min.css">
+    <link rel="stylesheet" href="http://www.bootcss.com/p/buttons/css/buttons.css">
+    <link href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+      .navbar {
+        background: #283846;
+      }
+      .sidebar {
+        top: 61px;
+      }
+      .tabtit li {
+        float: left;
+        width: 50%;
+        padding: 10px 15px;
+        list-style: none;
+        cursor: pointer;
+        text-align: center;
+      }
+      .tabtit li.seled {
+        color: #44b548;
+        border-bottom: 1px solid #44b548;
+      }
+      .list-group-item span {
+        display: block;
+        float: right;
+        width: 102px;
+        height: 21px;
+        background: #44b548;
+        border-radius: 21px;
+        text-align: center;
+        color: #fff;
+      }
+      .list-group-item div {
+        float: right;
+        margin: -10px 40px 0 0;
+      }
+      .sale-list {
+        background: url('../images/right_arry.png') 95% center  no-repeat;
+      }
+      .main p {
+        line-height: 80px;
+        font-size:30px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-default default" role="navigation">
+    <div class="container-fluid">
+      <span class="navbar-left" onclick="history.go(-1);">
+      <img src="../images/goback.png" alt="">
+    </span>
+      <div class="navbar-header default text-center navbar-text navbar-center col-md-11">
+        <p class="while">销售查询</p>
+      </div>
+    </div>
+  </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-3 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="clearfix">
+              <ul class="list-group tabtit">
+                <li class="seled">今日本机销售</li>
+                <li class="">本次当班销售</li>
+              </ul>
+            </li>
+            <li>
+              <ul class="list-group clearfix">
+                <li class="list-group-item sale-list">销售统计<div>销售额</div><br><div>￥0.00</div></li>
+                <li class="list-group-item">销售数据列表 <span>0</span></li>
+              </ul>
+            </li>      
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 main text-center">
+              <img src="../images/nosale.png" alt="">
+              <p>暂无销售记录</p>
+        </div>
+      </div>
+    </div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<script src="../dist/js/bootstrap-switch.min.js"></script>
+<script>
+  $(".tabtit li").click(function () {
+      $(this).addClass("seled").siblings().removeClass("seled");
+  })
+</script>
+</html>

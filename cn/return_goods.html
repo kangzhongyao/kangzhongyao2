@@ -1,0 +1,336 @@
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../dist/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../dist/css/bootstrap-switch.min.css">
+	<title>收银软件-退货结算</title>
+	<style>
+		body,html{
+			background: rgb(238,238,238);
+		}
+		.main {
+			width: 100%;
+			padding:0 0 30px;
+			background: rgb(238,238,238);
+		}
+		.main .navbar {
+			text-align: center;
+			background: rgb(39,56,70);
+		}
+		.navbar-header {
+			text-align: center;
+		}
+		.while {
+			margin-bottom: 0;
+			color: #fff;
+			font-size: 18px;
+			line-height: 40px;
+		}
+		.jumbotron	{
+			width: 80%;
+			padding: 10 60px 80px;
+			margin: 0 auto;
+			background: #fff;
+		}
+		.container .jumbotron {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		/*.input-group {
+			width: 90%;
+			margin: 10px auto;
+		}*/
+		.btn {
+			margin: 20px auto;
+			background: rgb(159,174,186);
+			border: none;
+		}
+		.btn:hover,.btn:active {
+			border: none;
+			background: #283846;
+			outline: none;
+		}
+		.input-group-addon {
+			position: relative;
+			background: none;
+			border: none;
+		}
+		.input-group-lg>.form-control {
+			border-radius: 0;
+		}
+		.Forget_password,.sigin {
+			font-size: 14px;
+		}
+		.mess {
+			margin-top: 60px;
+		}
+		.mess .sigin {
+			margin-right: 90px;
+			float: right;
+			color: rgb(253,154,46);
+		}
+		.mess .Forget_password {
+			margin-left: 93px;
+			color: rgb(82,183,110);
+		}
+		.input-group-addon:before {
+		    display: inline-block;
+		    margin-right: 4px;
+		    content: "*";
+		    font-family: SimSun;
+		    line-height: 1;
+		    font-size: 12px;
+		    color: #fff;
+		}
+		.input-group-addon1:before {
+		    display: inline-block;
+		    margin-right: 4px;
+		    content: "*";
+		    font-family: SimSun;
+		    line-height: 1;
+		    font-size: 12px;
+		    color: #F04134;
+		}
+		*:before, *:after {
+		    box-sizing: border-box;
+		}
+		.input-group-lg>.form-control, .input-group-lg>.input-group-addon, .input-group-lg>.input-group-btn>.btn {
+			padding: 0;
+		}
+		button {
+			padding: 0;
+			border:none;
+			background: #fff;
+			outline: none;
+		}
+		.has-switch{
+		  float: right;
+		  border-radius: 30px;
+		}
+		.input-group-lg>.form-control {
+			width: 310px;
+		}
+		.navbar-left img {
+			width: 40px;
+			height: 40px;
+			margin: 20px 0;
+		}
+		.navbar {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 999;
+		}
+		.container {
+			margin-top: 100px;
+		}
+		.modal-footer {
+			text-align: center;
+			background: #fff;
+		}
+		.modal-header {
+			background: rgb(40,56,70);
+			color: #fff;
+		}
+		.modal-body .list-group>.list-group-item:nth-child(1-3) {
+			background: rgb(40,56,70);
+		}
+		.modal-body {
+			background: rgb(40,56,70);
+			color: #fff;
+			padding: 0 15px;
+		}
+		.modal-content {
+			background: rgb(40,56,70);
+		}
+		.modal-header {
+			border-bottom: none;
+		}
+		.col-md-6 .col-md-2 {
+			margin: 0 10px 10px 10px;
+		}
+		.col-md-12 .col-md-2 {
+			margin: 0 0 0 10px;
+		}
+		.col-md-12 .col-md-1 {
+			margin: 0 10px 0 10px;
+		}
+		.col-md-6 .col-md-4 {
+			margin: 0 0 0 10px;
+		}
+		.col-md-12 .col-md-3 {
+			margin-left: 10px; 
+		}
+		.green {
+			background: rgb(68,181,72);
+			border-radius: 10px;
+			color: #fff;
+			box-shadow: 0px 5px 10px rgb(198,198,198);
+		}
+		.white {
+			background: #fff;
+			border-radius: 10px;
+			color: rgb(102,102,102);
+			box-shadow: 0px 5px 10px rgb(157,157,157);
+		}
+		.col-md-6 .jumbotron {
+			width: 100%;
+			padding-left: -15px;
+			padding-right: 0;
+			background: rgb(40,56,70);
+			border-radius: 10px;
+			color: #fff;
+			text-align: center;
+		}
+		.col-md-6 {
+			padding-left: 0;
+		}
+		.list-group-item {
+			user-select: none;
+			border:none;
+		}
+		.col-md-4>.col-md-5 {
+			background: #fff;
+			color: rgb(178,178,178);
+			border-radius: 10px;
+			margin: 0 10px;
+		}
+		.jumbotron p {
+			margin-bottom: 0;
+		}
+	</style>
+</head>
+<body>
+<div class="main">
+	<nav class="navbar navbar-default default" role="navigation">
+	  <div class="container-fluid">
+	  	<span class="navbar-left" onclick="history.go(-1);">
+			<img src="../images/goback.png" alt="">
+	 	</span>
+	    <div class="navbar-header default text-left navbar-text navbar-center col-md-11">
+	      <p class="while">退货结算</p>
+	    </div>
+	  </div>
+	</nav>
+	<div class="container">
+		<div class="jumbotron row">
+			<ul class="list-group col-md-8">
+				<li class="list-group-item">
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">应退金额</span>
+					  <input type="tel" class="form-control" placeholder="输入金额" aria-describedby="basic-addon1">
+					</div>
+				</li>
+				<li class="list-group-item">
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1" >现金</span>
+					  <input type="tel" class="form-control" style="width:446px;float: right;" placeholder="输入金额" aria-describedby="basic-addon1">
+					</div>
+				</li>
+				<li class="list-group-item col-md-6">
+					<div class="input-group col-md-12" style="margin-left:15px;">
+					  <span class="input-group-addon"  id="basic-addon1">实退金额</span>
+					  <input type="tel" class="form-control" placeholder="输入金额" aria-describedby="basic-addon1">
+					</div>
+					
+				</li>
+				<li class="list-group-item col-md-6" >
+					<div class="input-group col-md-12">
+					  <span class="input-group-addon" id="basic-addon1">找零</span>
+					  <input type="tel" class="form-control" placeholder="输入金额" aria-describedby="basic-addon1">
+					</div>
+				</li>
+			</ul>
+			<ul class="list-group col-md-4" style="background:rgb(194,219,241);padding:0 15px 10px;">
+				<li class="list-group-item col-md-12 text-center" style="background:rgb(40,56,70);margin:10px auto;color:#fff;border-radius:10px;">
+					<p>现金</p>
+				</li>
+				<li class="list-group-item col-md-5 text-center">
+					<p>银联卡</p>
+				</li>
+				<li class="list-group-item col-md-5 text-center">
+					<p>储值卡</p>
+				</li>
+			</ul>
+			<ul class="list-group col-md-4" style="background:rgb(194,219,241);">
+				<li class="list-group-item col-md-12 text-center" style="margin:10px auto;border-radius:10px;background:inherit;">
+					<p>组合支付</p>
+				</li>
+			</ul>
+			<ul class="list-group col-md-12 text-center">
+				<li class="list-group-item col-md-2 green">
+					<p>￥50</p>
+				</li>
+				<li class="list-group-item col-md-1 white">
+					<p>1</p>
+				</li>
+				<li class="list-group-item col-md-1 white">
+					<p>2</p>
+				</li>
+				<li class="list-group-item col-md-1 white">
+					<p>3</p>
+				</li>
+				<li class="list-group-item col-md-2 white">
+					<p>delete</p>
+				</li>
+				<li class="list-group-item col-md-3 white">
+					<p>结算后打印</p>
+				</li>
+			</ul>
+			<ul class="list-group col-md-6 text-center">
+				<li class="list-group-item col-md-4 green" style="margin: 0 0 0 10px;">
+					<p>￥100</p>
+				</li>
+				<li class="list-group-item col-md-2 white">
+					<p>4</p>
+				</li>
+				<li class="list-group-item col-md-2 white">
+					<p>5</p>
+				</li>
+				<li class="list-group-item col-md-2 white">
+					<p>6</p>
+				</li>
+				<li class="list-group-item col-md-4 green">
+					<p>￥200</p>
+				</li>
+				<li class="list-group-item col-md-2 white">
+					<p>7</p>
+				</li>
+				<li class="list-group-item col-md-2 white">
+					<p>8</p>
+				</li>
+				<li class="list-group-item col-md-2 white">
+					<p>9</p>
+				</li>
+				<li class="list-group-item col-md-4 green">
+					<p>￥300</p>
+				</li>
+				<li class="list-group-item col-md-2 white">
+					<p>0</p>
+				</li>
+				<li class="list-group-item col-md-2 white">
+					<p>00</p>
+				</li>
+				<li class="list-group-item col-md-2 white">
+					<p>.</p>
+				</li>
+			</ul>
+			<div class=" col-md-6" style="padding-bottom: 50px;height:174px;">
+				<div class="jumbotron" style="height:174px;">
+					<p style="margin-top:60px;">确认结算(空格键)</p>
+					<br>
+					<br>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="../dist/js/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<script src="../dist/js/bootstrap-switch.min.js"></script>
+</body>
+</html>
